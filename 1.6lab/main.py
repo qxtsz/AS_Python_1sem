@@ -1,10 +1,15 @@
 #Задание 6#
 if __name__ == "__main__":
     pass
-s = input().strip()
-n = int(input())
-if not s:
-    print("error")
-else:
-    f = s[:n] + s[n+1:]
-    print(f)
+def zxc(s, n):
+    return s[n-1::n]
+
+def qwe(s, n):
+    result = ''
+    for i in range(len(s)):
+        if (i + 1) % n != 0:
+            result += s[i]
+    return result
+s = input()
+n = int(input("n-ый символ "))
+print(qwe(s, n))
